@@ -61,7 +61,7 @@ public class UMTS
         this.A14 = A14;
         this.A15 = A15;
         this.A16 = A16;
-        this.A17 = CalculateA17();
+        A17 = CalculateA17();
     }
 
     #endregion
