@@ -5,13 +5,6 @@ VisualStudioVersion = 15.0.28010.2016
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkBudgets2", "LinkBudgets2\LinkBudgets2.csproj", "{07EFF1F1-28F9-472A-B8AB-FDBB303E74E2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{442CE0F0-E9D0-4B0F-947C-0C405C20EAA5}"
-	ProjectSection(SolutionItems) = preProject
-		GSM.cs = GSM.cs
-		UMTS.cs = UMTS.cs
-		WIMAX.cs = WIMAX.cs
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
