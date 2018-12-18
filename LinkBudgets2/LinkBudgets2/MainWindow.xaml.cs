@@ -120,7 +120,27 @@ namespace LinkBudgets2
                     //Check frequency range (150 MHz - 2300 MHz)
                     if (float.Parse(WA6.Text) >= 150 && float.Parse(WA6.Text) <= 2300.0f)
                     {
-                        
+                        WIMAX wimax = new WIMAX(float.Parse(WA1.Text),
+                            float.Parse(WA2.Text),
+                            float.Parse(WA3.Text),
+                            float.Parse(WA4.Text),
+                            float.Parse(WA6.Text),
+                            float.Parse(WA7.Text),
+                            float.Parse(WA9.Text),
+                            float.Parse(WA10.Text),
+                            float.Parse(WA11.Text),
+                            float.Parse(WA14.Text),
+                            float.Parse(WA15.Text),
+                            float.Parse(WA17.Text),
+                            float.Parse(WA18.Text)
+                            );
+
+                        WA5.Text = wimax.A5.ToString();
+                        WA8.Text = wimax.A9.ToString();
+                        WA12.Text = wimax.A12.ToString();
+                        WA13.Text = wimax.A13.ToString();
+                        WA16.Text = wimax.A16.ToString();
+                        WLinkBudget.Text = "Link Budget: " + wimax.A19.ToString() + "dB";
                     }
                     else
                     {
