@@ -7,6 +7,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <TabControl HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="782">
+            <TabItem Header="WIMAX">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="GSM">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="UMTS">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
