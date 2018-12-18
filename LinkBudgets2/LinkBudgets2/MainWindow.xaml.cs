@@ -55,6 +55,24 @@ namespace LinkBudgets2
             wimaxFields.Add(WA16);
             wimaxFields.Add(WA17);
             wimaxFields.Add(WA18);
+            wimaxFields.Add(WA1D);
+            wimaxFields.Add(WA2D);
+            wimaxFields.Add(WA3D);
+            wimaxFields.Add(WA4D);
+            wimaxFields.Add(WA5D);
+            wimaxFields.Add(WA6D);
+            wimaxFields.Add(WA7D);
+            wimaxFields.Add(WA8D);
+            wimaxFields.Add(WA9D);
+            wimaxFields.Add(WA10D);
+            wimaxFields.Add(WA11D);
+            wimaxFields.Add(WA12D);
+            wimaxFields.Add(WA13D);
+            wimaxFields.Add(WA14D);
+            wimaxFields.Add(WA15D);
+            wimaxFields.Add(WA16D);
+            wimaxFields.Add(WA17D);
+            wimaxFields.Add(WA18D);
         }
 
         private void GetFieldsGSM()
@@ -77,6 +95,22 @@ namespace LinkBudgets2
             gsmFields.Add(GA14);
             gsmFields.Add(GA15);
             gsmFields.Add(GA16);
+            gsmFields.Add(GA1D);
+            gsmFields.Add(GA2D);
+            gsmFields.Add(GA3D);
+            gsmFields.Add(GA4D);
+            gsmFields.Add(GA5D);
+            gsmFields.Add(GA6D);
+            gsmFields.Add(GA7D);
+            gsmFields.Add(GA8D);
+            gsmFields.Add(GA9D);
+            gsmFields.Add(GA10D);
+            gsmFields.Add(GA11D);
+            gsmFields.Add(GA12D);
+            gsmFields.Add(GA13D);
+            gsmFields.Add(GA14D);
+            gsmFields.Add(GA15D);
+            gsmFields.Add(GA16D);
         }
 
         private void GetFieldsUMTS()
@@ -99,6 +133,22 @@ namespace LinkBudgets2
             umtsFields.Add(UA14);
             umtsFields.Add(UA15);
             umtsFields.Add(UA16);
+            umtsFields.Add(UA1D);
+            umtsFields.Add(UA2D);
+            umtsFields.Add(UA3D);
+            umtsFields.Add(UA4D);
+            umtsFields.Add(UA5D);
+            umtsFields.Add(UA6D);
+            umtsFields.Add(UA7D);
+            umtsFields.Add(UA8D);
+            umtsFields.Add(UA9D);
+            umtsFields.Add(UA10D);
+            umtsFields.Add(UA11D);
+            umtsFields.Add(UA12D);
+            umtsFields.Add(UA13D);
+            umtsFields.Add(UA14D);
+            umtsFields.Add(UA15D);
+            umtsFields.Add(UA16D);
         }
 
         void CalculateWIMAX(object sender, RoutedEventArgs e)
@@ -117,35 +167,54 @@ namespace LinkBudgets2
                 //Check fields occupied
                 if (!missingValue)
                 {
-                    //Check frequency range (150 MHz - 2300 MHz)
-                    if (float.Parse(WA6.Text) >= 150 && float.Parse(WA6.Text) <= 2300.0f)
-                    {
-                        WIMAX wimax = new WIMAX(float.Parse(WA1.Text),
-                            float.Parse(WA2.Text),
-                            float.Parse(WA3.Text),
-                            float.Parse(WA4.Text),
-                            float.Parse(WA6.Text),
-                            float.Parse(WA7.Text),
-                            float.Parse(WA9.Text),
-                            float.Parse(WA10.Text),
-                            float.Parse(WA11.Text),
-                            float.Parse(WA14.Text),
-                            float.Parse(WA15.Text),
-                            float.Parse(WA17.Text),
-                            float.Parse(WA18.Text)
-                            );
+                    //Uplink
+                    WIMAX wimax = new WIMAX(float.Parse(WA1.Text),
+                        float.Parse(WA2.Text),
+                        float.Parse(WA3.Text),
+                        float.Parse(WA4.Text),
+                        float.Parse(WA6.Text),
+                        float.Parse(WA7.Text),
+                        float.Parse(WA9.Text),
+                        float.Parse(WA10.Text),
+                        float.Parse(WA11.Text),
+                        float.Parse(WA14.Text),
+                        float.Parse(WA15.Text),
+                        float.Parse(WA17.Text),
+                        float.Parse(WA18.Text)
+                        );
 
-                        WA5.Text = wimax.A5.ToString();
-                        WA8.Text = wimax.A9.ToString();
-                        WA12.Text = wimax.A12.ToString();
-                        WA13.Text = wimax.A13.ToString();
-                        WA16.Text = wimax.A16.ToString();
-                        WLinkBudget.Text = "Link Budget: " + wimax.A19.ToString() + "dB";
-                    }
-                    else
-                    {
-                        MessageBox.Show("The channel bandwidth must be a value between 150 - 2300 MHz", "Out of Bounds", MessageBoxButton.OK, MessageBoxImage.Exclamation);
-                    }
+                    WA5.Text = wimax.A5.ToString();
+                    WA8.Text = wimax.A9.ToString();
+                    WA12.Text = wimax.A12.ToString();
+                    WA13.Text = wimax.A13.ToString();
+                    WA16.Text = wimax.A16.ToString();
+                    WLinkBudget.Text = wimax.A19.ToString();
+
+                    //Downlink
+                    WIMAX wimaxD = new WIMAX(float.Parse(WA1D.Text),
+                        float.Parse(WA2D.Text),
+                        float.Parse(WA3D.Text),
+                        float.Parse(WA4D.Text),
+                        float.Parse(WA6D.Text),
+                        float.Parse(WA7D.Text),
+                        float.Parse(WA9D.Text),
+                        float.Parse(WA10D.Text),
+                        float.Parse(WA11D.Text),
+                        float.Parse(WA14D.Text),
+                        float.Parse(WA15D.Text),
+                        float.Parse(WA17D.Text),
+                        float.Parse(WA18D.Text)
+                        );
+
+                    WA5D.Text = wimaxD.A5.ToString();
+                    WA8D.Text = wimaxD.A9.ToString();
+                    WA12D.Text = wimaxD.A12.ToString();
+                    WA13D.Text = wimaxD.A13.ToString();
+                    WA16D.Text = wimaxD.A16.ToString();
+                    WLinkBudgetD.Text = wimaxD.A19.ToString();
+
+                    WLinkBudgetT1.Visibility = Visibility.Visible;
+                    WLinkBudgetT2.Visibility = Visibility.Visible;
                 }
                 else
                 {
@@ -174,33 +243,48 @@ namespace LinkBudgets2
                 //Check fields occupied
                 if (!missingValue)
                 {
-                    //Check frequency range (150 MHz - 2300 MHz)
-                    if (float.Parse(GA5.Text) >= 150000.0f && float.Parse(GA5.Text) <= 2300000.0f)
-                    {
-                        GSM gsm = new GSM(float.Parse(GA1.Text),
-                            float.Parse(GA2.Text),
-                            float.Parse(GA3.Text),
-                            float.Parse(GA5.Text),
-                            float.Parse(GA7.Text),
-                            float.Parse(GA8.Text),
-                            float.Parse(GA9.Text),
-                            float.Parse(GA11.Text),
-                            float.Parse(GA12.Text),
-                            float.Parse(GA14.Text),
-                            float.Parse(GA15.Text),
-                            float.Parse(GA16.Text));
+                    //Uplink
+                    GSM gsm = new GSM(float.Parse(GA1.Text),
+                        float.Parse(GA2.Text),
+                        float.Parse(GA3.Text),
+                        float.Parse(GA5.Text),
+                        float.Parse(GA7.Text),
+                        float.Parse(GA8.Text),
+                        float.Parse(GA9.Text),
+                        float.Parse(GA11.Text),
+                        float.Parse(GA12.Text),
+                        float.Parse(GA14.Text),
+                        float.Parse(GA15.Text),
+                        float.Parse(GA16.Text));
 
-                        GA4.Text = gsm.A4.ToString();
-                        GA6.Text = gsm.A6.ToString();
-                        GA10.Text = gsm.A10.ToString();
-                        GA13.Text = gsm.A13.ToString();
-                        GLinkBudget.Text = "Link Budget: " + gsm.A17.ToString() + "dB";
+                    GA4.Text = gsm.A4.ToString();
+                    GA6.Text = gsm.A6.ToString();
+                    GA10.Text = gsm.A10.ToString();
+                    GA13.Text = gsm.A13.ToString();
+                    GLinkBudget.Text = gsm.A13.ToString();
 
-                    }
-                    else
-                    {
-                        MessageBox.Show("The channel bandwidth must be a value between 150 000 - 2 300 000 KHz", "Out of Bounds", MessageBoxButton.OK, MessageBoxImage.Exclamation);
-                    }
+                    //Downlink
+                    GSM gsmD = new GSM(float.Parse(GA1D.Text),
+                        float.Parse(GA2D.Text),
+                        float.Parse(GA3D.Text),
+                        float.Parse(GA5D.Text),
+                        float.Parse(GA7D.Text),
+                        float.Parse(GA8D.Text),
+                        float.Parse(GA9D.Text),
+                        float.Parse(GA11D.Text),
+                        float.Parse(GA12D.Text),
+                        float.Parse(GA14D.Text),
+                        float.Parse(GA15D.Text),
+                        float.Parse(GA16D.Text));
+
+                    GA4D.Text = gsmD.A4.ToString();
+                    GA6D.Text = gsmD.A6.ToString();
+                    GA10D.Text = gsmD.A10.ToString();
+                    GA13D.Text = gsmD.A13.ToString();
+                    GLinkBudgetD.Text = gsmD.A13.ToString();
+
+                    GLinkBudgetT1.Visibility = Visibility.Visible;
+                    GLinkBudgetT2.Visibility = Visibility.Visible;
                 }
                 else
                 {
@@ -229,6 +313,7 @@ namespace LinkBudgets2
                 //Check fields occupied
                 if (!missingValue)
                 {
+                    //Uplink
                     UMTS umts = new UMTS(float.Parse(UA1.Text),
                         float.Parse(UA2.Text),
                         float.Parse(UA3.Text),
@@ -246,7 +331,30 @@ namespace LinkBudgets2
                     UA5.Text = umts.A5.ToString();
                     UA9.Text = umts.A9.ToString();
                     UA12.Text = umts.A12.ToString();
-                    ULinkBudget.Text = "Link Budget: " + umts.A17.ToString() + "dB";
+                    ULinkBudget.Text = umts.A17.ToString();
+
+                    //Downlink
+                    UMTS umtsD = new UMTS(float.Parse(UA1.Text),
+                        float.Parse(UA2D.Text),
+                        float.Parse(UA3D.Text),
+                        float.Parse(UA4D.Text),
+                        float.Parse(UA6D.Text),
+                        float.Parse(UA7D.Text),
+                        float.Parse(UA8D.Text),
+                        float.Parse(UA10D.Text),
+                        float.Parse(UA11D.Text),
+                        float.Parse(UA13D.Text),
+                        float.Parse(UA14D.Text),
+                        float.Parse(UA15D.Text),
+                        float.Parse(UA16D.Text));
+
+                    UA5D.Text = umtsD.A5.ToString();
+                    UA9D.Text = umtsD.A9.ToString();
+                    UA12D.Text = umtsD.A12.ToString();
+                    ULinkBudgetD.Text = umtsD.A17.ToString();
+
+                    ULinkBudgetT1.Visibility = Visibility.Visible;
+                    ULinkBudgetT2.Visibility = Visibility.Visible;
                 }
                 else
                 {
