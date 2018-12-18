@@ -5,22 +5,23 @@ public class UMTS
 {
     #region Properties
 
-    public float A1 { get; }
-    public float A2 { get; }
-    public float A3 { get; }
-    public float A4 { get; }
-    public float A5 { get; }
-    public float A6 { get; }
-    public float A7 { get; }
-    public float A8 { get; }
-    public float A9 { get; }
-    public float A10 { get; }
-    public float A11 { get; }
-    public float A12 { get; }
-    public float A13 { get; }
-    public float A14 { get; }
-    public float A15 { get; }
-    public float A16 { get; }
+    public float A1 { get; } // < Data rate
+    public float A2 { get; } // < Power amplifier output power
+    public float A3 { get; } // < Transmit antenna gain
+    public float A4 { get; } // < Transmitter loss
+    public float A5 { get; } // < Effective isotropic radiated power
+    public float A6 { get; } // < Receiver antenna gain
+    public float A7 { get; } // < Receiver loss
+    public float A8 { get; } // < Receiver noise figure
+    public float A9 { get; } // < Receiver noise level
+    public float A10 { get; } // < Interference margin
+    public float A11 { get; } // < Required SNR
+    public float A12 { get; } // < Receiver sensitivity (dBm)
+    public float A13 { get; } // < Macro diversity gain
+    public float A14 { get; } // < Shadow-fade margin
+    public float A15 { get; } // < Building penetration loss
+    public float A16 { get; } // < Loss by the body
+    public float A17 { get; } // < Link margin
 
     #endregion
 
@@ -60,6 +61,7 @@ public class UMTS
         this.A14 = A14;
         this.A15 = A15;
         this.A16 = A16;
+        this.A17 = CalculateA17();
     }
 
     #endregion
