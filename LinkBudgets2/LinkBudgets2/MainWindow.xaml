@@ -5,17 +5,245 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LinkBudgets2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="700" Width="500" ResizeMode="NoResize">
     <Grid>
-        <TabControl HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="782">
+        <TabControl HorizontalAlignment="Left" Height="700" VerticalAlignment="Top" Width="500">
             <TabItem Header="WIMAX">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,25.0,0,0" TextWrapping="Wrap" Text="Power amplifier output power: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="WA1" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,25.0,0,0" TextWrapping="Wrap" Text="dBm" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,50.0,0,0" TextWrapping="Wrap" Text="Number of tx antennas: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="WA2" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                   
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,75.0,0,0" TextWrapping="Wrap" Text="Transmit antenna gain: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="WA3" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,75.0,0,0" TextWrapping="Wrap" Text="dB" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,100.0,0,0" TextWrapping="Wrap" Text="Transmitter loss: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="WA4" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,100.0,0,0" TextWrapping="Wrap" Text="dB" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,125.0,0,0" TextWrapping="Wrap" Text="Effective isotropic radiated power: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="WA5" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="true" IsEnabled="false"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,125.0,0,0" TextWrapping="Wrap" Text="dBm" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,150.0,0,0" TextWrapping="Wrap" Text="Channel bandwidth: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="WA6" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,150.0,0,0" TextWrapping="Wrap" Text="MHz" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,175.0,0,0" TextWrapping="Wrap" Text="Number of subchannels: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="WA7" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,200.0,0,0" TextWrapping="Wrap" Text="Receiver noise level: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="WA8" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,197,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="true" IsEnabled="false"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,200.0,0,0" TextWrapping="Wrap" Text="dBm" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                  
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,225.0,0,0" TextWrapping="Wrap" Text="Receiver noise figure: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="WA9" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,225.0,0,0" TextWrapping="Wrap" Text="dB" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,250.0,0,0" TextWrapping="Wrap" Text="Required SNR: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="WA10" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,250.0,0,0" TextWrapping="Wrap" Text="dB" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,275.0,0,0" TextWrapping="Wrap" Text="Macro diversity gain: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="WA11" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,272,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,275.0,0,0" TextWrapping="Wrap" Text="dB" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,300.0,0,0" TextWrapping="Wrap" Text="Subchannelization gain: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="WA12" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,297,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="true" IsEnabled="false"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,300.0,0,0" TextWrapping="Wrap" Text="dB" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,325.0,0,0" TextWrapping="Wrap" Text="Receiver sensitivity: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="WA13" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,322,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="true" IsEnabled="false"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,325.0,0,0" TextWrapping="Wrap" Text="dBm" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,350.0,0,0" TextWrapping="Wrap" Text="Receiver antenna gain: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="WA14" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,347,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,350.0,0,0" TextWrapping="Wrap" Text="dB" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,375.0,0,0" TextWrapping="Wrap" Text="Receiver loss: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="WA15" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,372,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,375.0,0,0" TextWrapping="Wrap" Text="dB" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,400.0,0,0" TextWrapping="Wrap" Text="System gain: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="WA16" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,397,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="true" IsEnabled="false"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,400.0,0,0" TextWrapping="Wrap" Text="dB" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,425.0,0,0" TextWrapping="Wrap" Text="Shadow-face margin: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="WA17" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,422,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,425.0,0,0" TextWrapping="Wrap" Text="dB" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,450.0,0,0" TextWrapping="Wrap" Text="Building penetration loss: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="WA18" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,447,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,450.0,0,0" TextWrapping="Wrap" Text="dB" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <Button Content="Calculate" HorizontalAlignment="Center" Margin="0,475,0,0" VerticalAlignment="Top" Width="75" Click="CalculateWIMAX"/>
+                 
+                    <TextBlock Name ="WLinkBudget" HorizontalAlignment="center" Margin="0.0,505.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="WCoverageRangeB" HorizontalAlignment="center" Margin="0.0,530.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="WCoverageRangeMS" HorizontalAlignment="center" Margin="0.0,545.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="WcoverageRangeS" HorizontalAlignment="center" Margin="0.0,560.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="WcoverageRangeR" HorizontalAlignment="center" Margin="0.0,575.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+
+                </Grid>
             </TabItem>
             <TabItem Header="GSM">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,25.0,0,0" TextWrapping="Wrap" Text="Power amplifier output power: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="GA1" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,25.0,0,0" TextWrapping="Wrap" Text="dBm" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,50.0,0,0" TextWrapping="Wrap" Text="Transmit antenna gain: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="GA2" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,50.0,0,0" TextWrapping="Wrap" Text="dB" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,75.0,0,0" TextWrapping="Wrap" Text="Transmitter loss: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="GA3" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,75.0,0,0" TextWrapping="Wrap" Text="dB" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,100.0,0,0" TextWrapping="Wrap" Text="Effective isotropic radiated power: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="GA4" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="true" IsEnabled="false"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,100.0,0,0" TextWrapping="Wrap" Text="dBm" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,125.0,0,0" TextWrapping="Wrap" Text="Channel bandwidth: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="GA5" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,125.0,0,0" TextWrapping="Wrap" Text="KHz" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,150.0,0,0" TextWrapping="Wrap" Text="Receiver noise level: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="GA6" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="true" IsEnabled="false"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,150.0,0,0" TextWrapping="Wrap" Text="dBm" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,175.0,0,0" TextWrapping="Wrap" Text="Receiver noise figure: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="GA7" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,175.0,0,0" TextWrapping="Wrap" Text="dB" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,200.0,0,0" TextWrapping="Wrap" Text="Required SNR: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="GA8" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,197,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,200.0,0,0" TextWrapping="Wrap" Text="dB" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                  
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,225.0,0,0" TextWrapping="Wrap" Text="Macro diversity gain: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="GA9" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,225.0,0,0" TextWrapping="Wrap" Text="dB" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,250.0,0,0" TextWrapping="Wrap" Text="Receiver sensitivity: "  VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="GA10" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="true" IsEnabled="false"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,250.0,0,0" TextWrapping="Wrap" Text="dBm" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,275.0,0,0" TextWrapping="Wrap" Text="Receiver antenna gain: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="GA11" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,272,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,275.0,0,0" TextWrapping="Wrap" Text="dB" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,300.0,0,0" TextWrapping="Wrap" Text="Receiver loss: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="GA12" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,297,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,300.0,0,0" TextWrapping="Wrap" Text="dB" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,325.0,0,0" TextWrapping="Wrap" Text="System gain: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="GA13" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,322,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="true" IsEnabled="false"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,325.0,0,0" TextWrapping="Wrap" Text="dB" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,350.0,0,0" TextWrapping="Wrap" Text="Shadow-face margin: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="GA14" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,347,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,350.0,0,0" TextWrapping="Wrap" Text="dB" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,375.0,0,0" TextWrapping="Wrap" Text="Building penetration loss: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="GA15" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,372,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,375.0,0,0" TextWrapping="Wrap" Text="dB" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,400.0,0,0" TextWrapping="Wrap" Text="Loss by the body" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="GA16" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,397,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,400.0,0,0" TextWrapping="Wrap" Text="dB" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                   
+                    
+                    <Button Content="Calculate" HorizontalAlignment="Center" Margin="0,475,0,0" VerticalAlignment="Top" Width="75" Click="CalculateGSM"/>
+                 
+                    <TextBlock Name ="GLinkBudget" HorizontalAlignment="center" Margin="0.0,505.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="GCoverageRangeB" HorizontalAlignment="center" Margin="0.0,530.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="GCoverageRangeMS" HorizontalAlignment="center" Margin="0.0,545.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="GcoverageRangeS" HorizontalAlignment="center" Margin="0.0,560.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="GcoverageRangeR" HorizontalAlignment="center" Margin="0.0,575.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                </Grid>
             </TabItem>
             <TabItem Header="UMTS">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,25.0,0,0" TextWrapping="Wrap" Text="Data rate: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="UA1" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,25.0,0,0" TextWrapping="Wrap" Text="kbps" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,50.0,0,0" TextWrapping="Wrap" Text="Power amplifier output power: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="UA2" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,50.0,0,0" TextWrapping="Wrap" Text="dBm" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,75.0,0,0" TextWrapping="Wrap" Text="Transmit antenna gain: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="UA3" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,75.0,0,0" TextWrapping="Wrap" Text="dB" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,100.0,0,0" TextWrapping="Wrap" Text="Transmitter loss: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="UA4" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,100.0,0,0" TextWrapping="Wrap" Text="dB" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,125.0,0,0" TextWrapping="Wrap" Text="Effective isotropic radiated power: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="UA5" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="true" IsEnabled="false"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,125.0,0,0" TextWrapping="Wrap" Text="dBm" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,150.0,0,0" TextWrapping="Wrap" Text="Receiver antenna gain: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="UA6" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,150.0,0,0" TextWrapping="Wrap" Text="dB" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,175.0,0,0" TextWrapping="Wrap" Text="Receiver loss: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="UA7" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,175.0,0,0" TextWrapping="Wrap" Text="dB" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,200.0,0,0" TextWrapping="Wrap" Text="Receiver noise figure: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="UA8" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,197,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,200.0,0,0" TextWrapping="Wrap" Text="dB" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                  
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,225.0,0,0" TextWrapping="Wrap" Text="Receiver noise level: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="UA9" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="true" IsEnabled="false"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,225.0,0,0" TextWrapping="Wrap" Text="dBm" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,250.0,0,0" TextWrapping="Wrap" Text="Interference margin: "  VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="UA10" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,250.0,0,0" TextWrapping="Wrap" Text="dB" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,275.0,0,0" TextWrapping="Wrap" Text="Required SNR: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="UA11" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,272,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,275.0,0,0" TextWrapping="Wrap" Text="dB" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,300.0,0,0" TextWrapping="Wrap" Text="Receiver sensitivity: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="UA12" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,297,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="true" IsEnabled="false"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,300.0,0,0" TextWrapping="Wrap" Text="dBm" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,325.0,0,0" TextWrapping="Wrap" Text="Macro diversity gain: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="UA13" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,322,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,325.0,0,0" TextWrapping="Wrap" Text="dB" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,350.0,0,0" TextWrapping="Wrap" Text="Shadow-face margin: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="UA14" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,347,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,350.0,0,0" TextWrapping="Wrap" Text="dB" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,375.0,0,0" TextWrapping="Wrap" Text="Building penetration loss: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="UA15" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,372,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,375.0,0,0" TextWrapping="Wrap" Text="dB" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,400.0,0,0" TextWrapping="Wrap" Text="Loss by the body" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="UA16" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,397,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,400.0,0,0" TextWrapping="Wrap" Text="dB" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                   
+                    
+                    <Button Content="Calculate" HorizontalAlignment="Center" Margin="0,475,0,0" VerticalAlignment="Top" Width="75" Click="CalculateUMTS"/>
+                 
+                    <TextBlock Name ="ULinkBudget" HorizontalAlignment="center" Margin="0.0,505.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="UCoverageRangeB" HorizontalAlignment="center" Margin="0.0,530.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="UCoverageRangeMS" HorizontalAlignment="center" Margin="0.0,545.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="UcoverageRangeS" HorizontalAlignment="center" Margin="0.0,560.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="UcoverageRangeR" HorizontalAlignment="center" Margin="0.0,575.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                </Grid>
             </TabItem>
         </TabControl>
     </Grid>
