@@ -22,10 +22,15 @@ public class WIMAX
     public float A17 { get; } //Shadow-fade margin
     public float A18 { get; } //Building penetratrion loss
     public float A19 { get; } //Link margin
+
+    public float BigRange { get; } //Big city Range
+    public float MediumRange { get; } //Medium city Range
+    public float SuburbanRange { get; } //Suburban city Range
+    public float RuralRange { get; } //Rural city Range
     #endregion
 
 
-    public WIMAX(float a1, float a2, float a3, float a4, float a6, float a7, float a9, float a10, float a11, float a14, float a15, float a17, float a18)
+    public WIMAX(float a1, float a2, float a3, float a4, float a6, float a7, float a9, float a10, float a11, float a14, float a15, float a17, float a18, float frequency, float hb, float hm)
 	{
 
         A1 = a1;
@@ -47,6 +52,12 @@ public class WIMAX
         A17 = a17;
         A18 = a18;
         A19 = CalculateA19(A16, A17, A18);
+
+        FormulaType aux;
+        BigRange = Formula.CalculateMaxDistance(AreaType.BigCity, A19, frequency, hb, hm, out aux);
+        MediumRange = Formula.CalculateMaxDistance(AreaType.MediumSmallCity, A19, frequency, hb, hm, out aux);
+        SuburbanRange = Formula.CalculateMaxDistance(AreaType.Suburban, A19, frequency, hb, hm, out aux);
+        RuralRange = Formula.CalculateMaxDistance(AreaType.Rural, A19, frequency, hb, hm, out aux);
 
     }
 
