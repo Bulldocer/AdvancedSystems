@@ -105,8 +105,8 @@
                     <Button Content="Calculate" HorizontalAlignment="Center" Margin="0,475,0,0" VerticalAlignment="Top" Width="75" Click="CalculateWIMAX"/>
                  
                     <TextBlock Name ="WLinkBudgetT1" HorizontalAlignment="left" Margin="60.0,505.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="Link budget: " Visibility="Hidden" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
-                    <TextBlock Name ="WLinkBudget" HorizontalAlignment="center" Margin="80.0,505.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
-                    <TextBlock Name ="WLinkBudgetD" HorizontalAlignment="center" Margin="215.0,505.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="WLinkBudget" HorizontalAlignment="center" Background="DarkSlateGray" Foreground="White" FontWeight="Bold" Margin="80.0,505.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="WLinkBudgetD" HorizontalAlignment="center" Background="DarkSlateGray" Foreground="White" FontWeight="Bold"  Margin="215.0,505.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
                     <TextBlock Name ="WLinkBudgetT2" HorizontalAlignment="left" Margin="400.0,505.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="dB" Visibility="Hidden" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
                     <TextBlock Name ="WCoverageRangeB" HorizontalAlignment="center" Margin="0.0,530.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
                     <TextBlock Name ="WCoverageRangeMS" HorizontalAlignment="center" Margin="0.0,545.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
