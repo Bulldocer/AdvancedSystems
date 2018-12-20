@@ -91,7 +91,7 @@ public class WIMAX
 
     private float CalculateA19(float A16, float A17, float A18)
     {
-        return A5 - A13 + A14 - A15;
+        return A16 - A17 - A18;
     }
     
     #endregion

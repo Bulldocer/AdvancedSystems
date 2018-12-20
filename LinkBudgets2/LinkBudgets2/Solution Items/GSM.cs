@@ -60,7 +60,7 @@ public class GSM
 
     float CalculateA6()
     {
-        float log10A5103 = (float)Math.Log10(A5 * (10 ^ 3));
+        float log10A5103 = (float)Math.Log10(A5 * (Math.Pow(10,3)));
         return -174 + 10 * log10A5103;
     }
 

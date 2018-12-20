@@ -119,7 +119,7 @@ public class UMTS
     /// <returns></returns>
     private float CalculateA17()
     {
-        return CalculateA5() + A6 - A7 - CalculateA12() + A13 - A14;
+        return CalculateA5() + A6 - A7 - CalculateA12() + A13 - A14 - A15 - A16;
     }
 
     #endregion

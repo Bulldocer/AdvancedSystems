@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LinkBudgets2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="700" Width="500" ResizeMode="NoResize">
+        Title="MainWindow" Height="740" Width="500" ResizeMode="NoResize">
     <Grid>
-        <TabControl HorizontalAlignment="Left" Height="700" VerticalAlignment="Top" Width="500">
+        <TabControl HorizontalAlignment="Left" Height="740" VerticalAlignment="Top" Width="500">
             <TabItem Header="WIMAX">
                 <Grid Background="#FFE5E5E5">
                     <TextBlock HorizontalAlignment="Left" Margin="270.0,2.0,0,0" TextWrapping="Wrap" Text="Uplink" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
@@ -102,21 +102,36 @@
                     <TextBox Name ="WA18D" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="325,447,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55"/>
                     <TextBlock HorizontalAlignment="Left" Margin="400.0,450.0,0,0" TextWrapping="Wrap" Text="dB" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
                     
-                    <Button Content="Calculate" HorizontalAlignment="Center" Margin="0,475,0,0" VerticalAlignment="Top" Width="75" Click="CalculateWIMAX"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,475.0,0,0" TextWrapping="Wrap" Text="Frequency: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="Wfrequency" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,472,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,475.0,0,0" TextWrapping="Wrap" Text="MHz" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,500.0,0,0" TextWrapping="Wrap" Text="Station height: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="WhStation" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,497,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,500.0,0,0" TextWrapping="Wrap" Text="m" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,525.0,0,0" TextWrapping="Wrap" Text="Mobile height: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="WhMobile" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,522,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,525.0,0,0" TextWrapping="Wrap" Text="m" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <Button Content="Calculate" HorizontalAlignment="Center" Margin="0,550,0,0" VerticalAlignment="Top" Width="75" Click="CalculateWIMAX"/>
                  
-                    <TextBlock Name ="WLinkBudgetT1" HorizontalAlignment="left" Margin="60.0,505.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="Link budget: " Visibility="Hidden" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
-                    <TextBlock Name ="WLinkBudget" HorizontalAlignment="center" Background="DarkSlateGray" Foreground="White" FontWeight="Bold" Margin="80.0,505.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
-                    <TextBlock Name ="WLinkBudgetD" HorizontalAlignment="center" Background="DarkSlateGray" Foreground="White" FontWeight="Bold"  Margin="215.0,505.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
-                    <TextBlock Name ="WLinkBudgetT2" HorizontalAlignment="left" Margin="400.0,505.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="dB" Visibility="Hidden" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
-                    <TextBlock Name ="WCoverageRangeB" HorizontalAlignment="center" Margin="0.0,530.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
-                    <TextBlock Name ="WCoverageRangeMS" HorizontalAlignment="center" Margin="0.0,545.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
-                    <TextBlock Name ="WcoverageRangeS" HorizontalAlignment="center" Margin="0.0,560.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
-                    <TextBlock Name ="WcoverageRangeR" HorizontalAlignment="center" Margin="0.0,575.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="WLinkBudgetT1" HorizontalAlignment="left" Margin="60.0,580.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="Link budget: " Visibility="Hidden" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="WLinkBudget" HorizontalAlignment="center" Background="DarkSlateGray" Foreground="White" FontWeight="Bold" Margin="80.0,580.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="WLinkBudgetD" HorizontalAlignment="center" Background="DarkSlateGray" Foreground="White" FontWeight="Bold"  Margin="215.0,580.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="WLinkBudgetT2" HorizontalAlignment="left" Margin="400.0,580.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="dB" Visibility="Hidden" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="WCoverageRangeB" HorizontalAlignment="center" Margin="0.0,605.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="WCoverageRangeMS" HorizontalAlignment="center" Margin="0.0,620.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="WcoverageRangeS" HorizontalAlignment="center" Margin="0.0,635.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="WcoverageRangeR" HorizontalAlignment="center" Margin="0.0,650.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
 
                 </Grid>
             </TabItem>
             <TabItem Header="GSM">
                 <Grid Background="#FFE5E5E5">
+                    <TextBlock HorizontalAlignment="Left" Margin="270.0,2.0,0,0" TextWrapping="Wrap" Text="Uplink" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="327.0,2.0,0,0" TextWrapping="Wrap" Text="Downlink" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
                     <TextBlock HorizontalAlignment="Left" Margin="60.0,25.0,0,0" TextWrapping="Wrap" Text="Power amplifier output power: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
                     <TextBox Name ="GA1" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55"/>
                     <TextBox Name ="GA1D" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="325,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55"/>
@@ -197,22 +212,37 @@
                     <TextBox Name ="GA16" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,397,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55"/>
                     <TextBox Name ="GA16D" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="325,397,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55"/>
                     <TextBlock HorizontalAlignment="Left" Margin="400.0,400.0,0,0" TextWrapping="Wrap" Text="dB" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,475.0,0,0" TextWrapping="Wrap" Text="Frequency: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="Gfrequency" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,472,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,475.0,0,0" TextWrapping="Wrap" Text="MHz" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,500.0,0,0" TextWrapping="Wrap" Text="Station height: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="GhStation" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,497,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,500.0,0,0" TextWrapping="Wrap" Text="m" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,525.0,0,0" TextWrapping="Wrap" Text="Mobile height: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="GhMobile" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,522,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,525.0,0,0" TextWrapping="Wrap" Text="m" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
                    
                     
-                    <Button Content="Calculate" HorizontalAlignment="Center" Margin="0,475,0,0" VerticalAlignment="Top" Width="75" Click="CalculateGSM"/>
+                    <Button Content="Calculate" HorizontalAlignment="Center" Margin="0,550,0,0" VerticalAlignment="Top" Width="75" Click="CalculateGSM"/>
                  
-                    <TextBlock Name ="GLinkBudgetT1" HorizontalAlignment="left" Margin="60.0,505.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="Link budget: " Visibility="Hidden" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
-                    <TextBlock Name ="GLinkBudget" HorizontalAlignment="center" Margin="80.0,505.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
-                    <TextBlock Name ="GLinkBudgetD" HorizontalAlignment="center" Margin="215.0,505.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
-                    <TextBlock Name ="GLinkBudgetT2" HorizontalAlignment="left" Margin="400.0,505.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="dB" Visibility="Hidden" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
-                    <TextBlock Name ="GCoverageRangeB" HorizontalAlignment="center" Margin="0.0,530.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
-                    <TextBlock Name ="GCoverageRangeMS" HorizontalAlignment="center" Margin="0.0,545.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
-                    <TextBlock Name ="GcoverageRangeS" HorizontalAlignment="center" Margin="0.0,560.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
-                    <TextBlock Name ="GcoverageRangeR" HorizontalAlignment="center" Margin="0.0,575.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="GLinkBudgetT1" HorizontalAlignment="left" Margin="60.0,580.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="Link budget: " Visibility="Hidden" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="GLinkBudget" HorizontalAlignment="center" Margin="80.0,580.0,0,0" Background="DarkSlateGray" Foreground="White" FontWeight="Bold"  TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="GLinkBudgetD" HorizontalAlignment="center" Margin="215.0,580.0,0,0" Background="DarkSlateGray" Foreground="White" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="GLinkBudgetT2" HorizontalAlignment="left" Margin="400.0,580.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="dB" Visibility="Hidden" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="GCoverageRangeB" HorizontalAlignment="center" Margin="0.0,605.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="GCoverageRangeMS" HorizontalAlignment="center" Margin="0.0,620.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="GcoverageRangeS" HorizontalAlignment="center" Margin="0.0,635.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="GcoverageRangeR" HorizontalAlignment="center" Margin="0.0,650.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
                 </Grid>
             </TabItem>
             <TabItem Header="UMTS">
                 <Grid Background="#FFE5E5E5">
+                    <TextBlock HorizontalAlignment="Left" Margin="270.0,2.0,0,0" TextWrapping="Wrap" Text="Uplink" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="327.0,2.0,0,0" TextWrapping="Wrap" Text="Downlink" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
                     <TextBlock HorizontalAlignment="Left" Margin="60.0,25.0,0,0" TextWrapping="Wrap" Text="Data rate: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
                     <TextBox Name ="UA1" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55"/>
                     <TextBox Name ="UA1D" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="325,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55"/>
@@ -293,18 +323,31 @@
                     <TextBox Name ="UA16" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,397,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55"/>
                     <TextBox Name ="UA16D" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="325,397,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55"/>
                     <TextBlock HorizontalAlignment="Left" Margin="400.0,400.0,0,0" TextWrapping="Wrap" Text="dB" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,475.0,0,0" TextWrapping="Wrap" Text="Frequency: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="Ufrequency" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,472,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,475.0,0,0" TextWrapping="Wrap" Text="MHz" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,500.0,0,0" TextWrapping="Wrap" Text="Station height: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="UhStation" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,497,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,500.0,0,0" TextWrapping="Wrap" Text="m" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" Margin="60.0,525.0,0,0" TextWrapping="Wrap" Text="Mobile height: " VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBox Name ="UhMobile" HorizontalAlignment="Left" Height="23" TextAlignment="Center" Margin="260,522,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="400.0,525.0,0,0" TextWrapping="Wrap" Text="m" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
                    
                     
-                    <Button Content="Calculate" HorizontalAlignment="Center" Margin="0,475,0,0" VerticalAlignment="Top" Width="75" Click="CalculateUMTS"/>
+                    <Button Content="Calculate" HorizontalAlignment="Center" Margin="0,550,0,0" VerticalAlignment="Top" Width="75" Click="CalculateUMTS"/>
+                    
                  
-                    <TextBlock Name ="ULinkBudgetT1" HorizontalAlignment="left" Margin="60.0,505.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="Link budget: " Visibility="Hidden" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
-                    <TextBlock Name ="ULinkBudget" HorizontalAlignment="center" Margin="80.0,505.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
-                    <TextBlock Name ="ULinkBudgetD" HorizontalAlignment="center" Margin="215.0,505.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
-                    <TextBlock Name ="ULinkBudgetT2" HorizontalAlignment="left" Margin="400.0,505.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="dB" Visibility="Hidden" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
-                    <TextBlock Name ="UCoverageRangeB" HorizontalAlignment="center" Margin="0.0,530.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
-                    <TextBlock Name ="UCoverageRangeMS" HorizontalAlignment="center" Margin="0.0,545.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
-                    <TextBlock Name ="UcoverageRangeS" HorizontalAlignment="center" Margin="0.0,560.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
-                    <TextBlock Name ="UcoverageRangeR" HorizontalAlignment="center" Margin="0.0,575.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="ULinkBudgetT1" HorizontalAlignment="left" Margin="60.0,580.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="Link budget: " Visibility="Hidden" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="ULinkBudget" HorizontalAlignment="center" Margin="80.0,580.0,0,0" Background="DarkSlateGray" Foreground="White" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="ULinkBudgetD" HorizontalAlignment="center" Margin="215.0,580.0,0,0" Background="DarkSlateGray" Foreground="White" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="ULinkBudgetT2" HorizontalAlignment="left" Margin="400.0,580.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="dB" Visibility="Hidden" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="UCoverageRangeB" HorizontalAlignment="center" Margin="0.0,605.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="UCoverageRangeMS" HorizontalAlignment="center" Margin="0.0,620.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="UcoverageRangeS" HorizontalAlignment="center" Margin="0.0,635.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
+                    <TextBlock Name ="UcoverageRangeR" HorizontalAlignment="center" Margin="0.0,650.0,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.052,-0.693"/>
                 </Grid>
             </TabItem>
         </TabControl>
