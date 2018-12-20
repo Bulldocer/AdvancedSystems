@@ -22,6 +22,12 @@ public class UMTS
     public float A15 { get; } // < Building penetration loss
     public float A16 { get; } // < Loss by the body
     public float A17 { get; } // < Link margin
+    
+    public FormulaType UsedFormula { get; }
+    public float BigCityResult { get; }
+    public float MediumSmallCityResult { get; }
+    public float Suburban { get; }
+    public float Rural { get; }
 
     #endregion
 
@@ -43,7 +49,10 @@ public class UMTS
     /// <param name="A14"></param>
     /// <param name="A15"></param>
     /// <param name="A16"></param>
-    public UMTS(float A1, float A2, float A3, float A4, float A6, float A7, float A8, float A10, float A11, float A13, float A14, float A15, float A16)
+    /// <param name="f"></param>
+    /// <param name="hb"></param>
+    /// <param name="hm"></param>
+    public UMTS(float A1, float A2, float A3, float A4, float A6, float A7, float A8, float A10, float A11, float A13, float A14, float A15, float A16, float f, float hb, float hm)
 	{
         this.A1 = A1;
         this.A2 = A2;
@@ -62,6 +71,15 @@ public class UMTS
         this.A15 = A15;
         this.A16 = A16;
         A17 = CalculateA17();
+        
+        FormulaType formType = FormulaType.Invalid;
+
+        BigCityResult = Formula.CalculateMaxDistance(AreaType.BigCity, A17, f, hb, hm, out formType);
+        MediumSmallCityResult = Formula.CalculateMaxDistance(AreaType.MediumSmallCity, A17, f, hb, hm, out formType);
+        Suburban = Formula.CalculateMaxDistance(AreaType.Suburban, A17, f, hb, hm, out formType);
+        Rural = Formula.CalculateMaxDistance(AreaType.Rural, A17, f, hb, hm, out formType);
+
+        UsedFormula = formType;
     }
 
     #endregion
