@@ -20,9 +20,13 @@ public class GSM
     public float A15 { get; } //Building penetration loss
     public float A16 { get; } //Loss by the body
     public float A17 { get; } //Link margin
+    public float BigRange { get; } //Big city Range
+    public float MediumRange { get; } //Medium city Range
+    public float SuburbanRange { get; } //Suburban city Range
+    public float RuralRange { get; } //Rural city Range
     #endregion
 
-    public GSM(float _A1, float _A2, float _A3, float _A5, float _A7, float _A8, float _A9, float _A11, float _A12, float _A14, float _A15, float _A16)
+    public GSM(float _A1, float _A2, float _A3, float _A5, float _A7, float _A8, float _A9, float _A11, float _A12, float _A14, float _A15, float _A16, float _frequency, float _hb, float _hm)
 	{
         A1 = _A1;
         A2 = _A2;
@@ -42,6 +46,11 @@ public class GSM
         A10 = CalculateA10();
         A13 = CalculateA13();
         A17 = CalculateA17();
+        FormulaType aux;
+        BigRange = Formula.CalculateMaxDistance(AreaType.BigCity, A17, _frequency, _hb, _hm, out aux);
+        MediumRange = Formula.CalculateMaxDistance(AreaType.MediumSmallCity, A17, _frequency, _hb, _hm, out aux);
+        SuburbanRange = Formula.CalculateMaxDistance(AreaType.Suburban, A17, _frequency, _hb, _hm, out aux);
+        RuralRange = Formula.CalculateMaxDistance(AreaType.Rural, A17, _frequency, _hb, _hm, out aux);
     }
 
     float CalculateA4()
