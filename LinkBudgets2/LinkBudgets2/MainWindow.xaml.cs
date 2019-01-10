@@ -318,7 +318,7 @@ namespace LinkBudgets2
                         GA6.Text = gsm.A6.ToString();
                         GA10.Text = gsm.A10.ToString();
                         GA13.Text = gsm.A13.ToString();
-                        GLinkBudget.Text = gsm.A13.ToString();
+                        GLinkBudget.Text = gsm.A17.ToString();
 
                         //Downlink
                         GSM gsmD = new GSM(float.Parse(GA1D.Text),
@@ -341,7 +341,7 @@ namespace LinkBudgets2
                         GA6D.Text = gsmD.A6.ToString();
                         GA10D.Text = gsmD.A10.ToString();
                         GA13D.Text = gsmD.A13.ToString();
-                        GLinkBudgetD.Text = gsmD.A13.ToString();
+                        GLinkBudgetD.Text = gsmD.A17.ToString();
 
                         GLinkBudgetT1.Visibility = Visibility.Visible;
                         GLinkBudgetT2.Visibility = Visibility.Visible;
